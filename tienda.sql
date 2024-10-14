@@ -13,3 +13,14 @@ Estado varchar(100) NOT NULL,                                  -- Estado
 Codigo_Postal varchar(10) NOT NULL,                            -- Codigo postal
 Pais varchar(100) NOT NULL                                     -- País
 );
+
+-- Crear la tabla clientes ( CON RELACION 1:1 CON Direcciones)
+CREATE TABLE Clientes (
+ID_Cliente INT AUTO_INCREMENT PRIMARY KEY,                      -- Clave primaria de clientes
+Nombre varchar(100) not null,                                   -- Nombre del cliente
+Email varchar(100) not null unique,                             -- Email unico del cliente
+Telefono varchar(15),                                           -- Telefono del cliente
+Fecha_Registro DATE,                                            -- Fecha de registro del cliente
+ID_Direcciones INT UNIQUE,                                      -- Relacion 1:1 con Direcciones
+FOREIGN KEY (ID_Direcciones) REFERENCES Direcciones(ID_Direcciones)  -- Clave foranea
+);
