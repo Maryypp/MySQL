@@ -37,8 +37,6 @@ VALUES ('Luis Fernández', 'luis.fernandez@example.com', '555-7890', '2024-01-14
 
 
 
-
-
 -- 3. Insertar para la tabla Productos
 INSERT INTO Productos (Nombre, Descripcion, Precio, Stock, Fecha_Agregado)
 VALUES ('Laptop HP', 'Laptop HP con 16GB de RAM', 799.99, 20, '2024-01-01');
